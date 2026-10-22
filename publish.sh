@@ -9,6 +9,7 @@ fi
 SOURCE_DECK="$SOURCE_ROOT/presentations/fde-workshop/index.html"
 [ -f "$SOURCE_DECK" ] || { echo "Deck not found: $SOURCE_DECK" >&2; exit 1; }
 
+cd "$(dirname "$0")"
 REPO_ROOT=$(git rev-parse --show-toplevel)
 cp "$SOURCE_DECK" "$REPO_ROOT/index.html"
 cd "$REPO_ROOT"
